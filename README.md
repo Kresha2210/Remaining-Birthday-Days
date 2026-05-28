@@ -2,7 +2,7 @@
 
 A simple birthday counter project that calculates how many days are left until the next birthday.
 
-## live link:   
+## live link:  https://remaining-birthday-days.vercel.app/
 
 ## Features
 
