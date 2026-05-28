@@ -1,0 +1,146 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe8;
+  --card: rgba(255, 255, 255, 0.82);
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #b45309;
+  --accent-dark: #92400e;
+  --border: rgba(31, 41, 55, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(180, 83, 9, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(251, 191, 36, 0.22),
+      transparent 30%
+    ),
+    var(--bg);
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 560px);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 50px rgba(31, 41, 55, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--accent-dark);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 14px 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.birthday-form {
+  margin-top: 28px;
+  display: grid;
+  gap: 16px;
+}
+
+.birthday-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.birthday-form span {
+  color: var(--text);
+}
+
+.birthday-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font: inherit;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  outline: none;
+}
+
+.birthday-form input:focus {
+  border-color: rgba(180, 83, 9, 0.6);
+  box-shadow: 0 0 0 4px rgba(180, 83, 9, 0.12);
+}
+
+.birthday-form button {
+  margin-top: 4px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), #d97706);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.birthday-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(180, 83, 9, 0.22);
+}
+
+.result {
+  margin: 20px 0 0;
+  min-height: 1.5em;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.result.error {
+  color: #b91c1c;
+}
+
+.result.success {
+  color: #166534;
+}
+
+@media (max-width: 520px) {
+  .card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Counter</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <p class="eyebrow">Birthday counter</p>
+        <h1>Find out how many days are left until your next birthday.</h1>
+        <p class="subtitle">
+          Enter your birth day and month. The form uses the same logic as your
+          Python script, but runs in the browser.
+        </p>
+
+        <form id="birthdayForm" class="birthday-form">
+          <label>
+            <span>Birth day</span>
+            <input
+              id="birthDay"
+              type="number"
+              min="1"
+              max="31"
+              placeholder="1-31"
+              required
+            />
+          </label>
+
+          <label>
+            <span>Birth month</span>
+            <input
+              id="birthMonth"
+              type="number"
+              min="1"
+              max="12"
+              placeholder="1-12"
+              required
+            />
+          </label>
+
+          <button type="submit">Calculate</button>
+        </form>
+
+        <p id="result" class="result" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
